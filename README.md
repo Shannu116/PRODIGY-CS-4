@@ -1,19 +1,34 @@
-# PRODIGY-CS-4
-A simple keylogger
+This is a **basic keylogger** tool built using Python and the `pynput` library. It is intended **strictly for educational and ethical use**, such as learning how input devices interact with software, or for authorized monitoring within legal and institutional boundaries.
 
-## 1.  Keylogger Class: 
-   - The `Keylogger` class is defined to handle keylogging functionality.
-   - It initializes an empty log to store pressed keys.
+> ⚠️ **Disclaimer:** This tool must **not** be used for unauthorized surveillance or data collection. Misuse can lead to serious legal consequences. Always ensure proper **consent** and **compliance with applicable laws and organizational policies**.
 
-## 2.  Methods: 
-   - `append_to_log(string)`: Appends the given string (representing a key) to the log.
-   - `process_key_press(key)`: Processes key presses. If the key is a character, it converts it to a string. If it's a special key (like space), it handles it accordingly.
-   - `report()`: Prints the accumulated log and resets it. It also schedules itself to run every 5 seconds.
-   - `start()`: Sets up a keyboard listener using the `pynput` library. It starts listening for key presses and calls the `report()` method.
+---
 
-## 3.  Usage: 
-   - both 'keylogger.py' and 'key_logger_start' both files should be in same folder because to run key_logger_start module keylogger is important there is no inbuilt module in python
-   - to start the keylogger run the key_logger_start.py file then for every 5 seconds, the log's of key stocks will we be stored in the keylog.txt file
+## 🎓 Purpose
 
+As part of training and research in cybersecurity and software monitoring techniques, this tool helps to:
 
-## NOTICE: Remember to handle the security implications of keylogging carefully, as it can be misused. Ensure that you have proper authorization and legitimate use cases when implementing such functionality.
+- Understand low-level keyboard input capturing.
+- Learn how keylogging works as a concept.
+- Demonstrate the need for robust system and endpoint security.
+- Analyze potential threats in a controlled environment.
+
+---
+
+## 🧠 How It Works
+
+- Captures each key press using `pynput.keyboard.Listener`.
+- Saves key events into a local file `keylog.txt`.
+- Logs are written every 5 seconds using a background timer.
+
+---
+
+## 🛠 Requirements
+
+- Python 3.x
+- `pynput` library
+
+Install with:
+
+```bash
+pip install pynput
